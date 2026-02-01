@@ -1,0 +1,154 @@
+what is the difference between class & object?
+ class is a design which defines what an object looks like, what an object can do, for what an object is for
+class don't occupy memory when it is created
+
+class 
+public/private/protected class name {
+ 	class property
+	class method
+	class object
+}
+
+object is the actual thing defined inside class 
+it triggers when system creates a new object and also occupy memory
+new objectname();
+
+important pillers
+
+Encapsulation-Keeping data safe inside the object. Only the object can change its own internals. A remote control: You press ""Volume Up (Public), but you don't touch the circuit board (Private).
+
+Inheritance-Creating a new class based on an existing one to reuse code A Sports Car is a type of Car It gets all the Car features for free but adds Turbo.
+
+Polymorphism, Different objects can respond to the same command in their own way. You tell a Dog and a Cat to Speak. The Dog barks, the Cat meows. Same command, different result.
+
+Abstraction, Hiding complex logic behind a simple interface. You don't need to know how an internal combustion engine works to drive a car; you just use the pedals.
+
+why oops?
+
+Procedural programming is about writing procedures or functions that perform operations on the data, while object-oriented programming is about creating objects that contain both data and functions.
+
+
+how to define a class?
+
+class class name {
+
+	//code
+}
+
+
+<?php
+class car {
+//properties
+
+ public $name;
+ public $model:
+
+//function/method
+ function setname($name) {
+	$this->name = $name;
+}
+
+function setmodel($model) {
+	$this->model = $model;
+}
+
+
+
+function getname($name) {
+	return $this->name ;
+}
+
+function getmodel($model) {
+	return $this->model;
+}
+
+
+//object
+$dzire = new car();
+$wegonR = new car();
+
+$desire->setmodel('2015');
+$wegonR->setmodel('2024');
+
+echo $weonR-.getmodel();
+
+}
+?>
+
+
+<?php
+
+class College
+{
+    public $qualification;
+    public $age;
+
+    function setQualification($qualification)
+    {
+        $this->qualification = $qualification;
+    }
+
+    function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    function getQualification()
+    {
+        return $this->qualification;
+    }
+
+  
+    function getAge()
+    {
+        return $this->age;
+    }
+}
+
+$B_tech = new College();
+$M_tech = new College();
+
+
+$B_tech->setQualification("B.Tech");
+$B_tech->setAge(23);
+
+$M_tech->setQualification("M.Tech");
+$M_tech->setAge(26);
+
+
+echo $B_tech->getQualification() . " - Age: " . $B_tech->getAge();
+echo "<br>";
+echo $M_tech->getQualification() . " - Age: " . $M_tech->getAge();
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

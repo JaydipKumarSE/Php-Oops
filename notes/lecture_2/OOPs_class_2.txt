@@ -1,0 +1,174 @@
+var_dump($account instanceof bankaccount);
+//for checking where the object is instance of which class with the keyword instanceof
+
+
+
+
+//CONSTRUCTOR SYNTAX*****************
+
+class Student {
+
+public $name;
+public $rollno;
+
+function __construct($name, $rollno) {
+	$this->name = $name;
+	$this->rollno = $rollno;
+ }
+
+}
+ 
+//creating object
+
+	$student = new Student("Satvik", 21);
+	   echo $student->name;
+	   echo $student->rollno;
+
+
+
+
+1. here we are using constructor which is an automated function which need not a calling, whenever we use new keyword to create an instance of a class PHP triggers it automatically.
+
+2. while using constructor we use double underscore (__).
+
+3. constructor is used to initialize object.
+4. it flushes itself after triggered to reduce memory.
+
+
+what is the significance if constructor?
+ans - reducing multiple line of code 
+      with constructor we can force specific data to be provided
+
+
+//USES OF CONSTRUCTOR*************
+
+class Student {
+
+
+
+function __construct(public $name, public $rollno) {
+	$this->name = $name;
+	$this->rollno = $rollno;
+ }
+
+}
+ 
+//creating object
+
+	$student = new Student("Satvik", 21);
+	   echo $student->name;
+	   echo $student->rollno;
+**********************************************************
+//LIVE EXAMPLE TO SET DB CONNECTION*************
+class dbs{
+
+public $server ="localhost";
+public $user ="root";
+public $password ="";
+public $dbname ="student";
+public $bird;
+
+//here we use constructor
+function __construct(){
+
+$this->bird = mysqli_connect($this->server, $this->user, $this->password, $this->dbname);
+
+
+
+if(!$bird) {
+ die("failed connection" . mysqli_connect_error());
+}
+echo "success";
+}
+
+}
+
+$DBS = new dbs();
+
+
+//USER REGISTRATION THROUGH OOPs***************
+
+class reguser {
+
+function reg($mail, $name, $mobile){
+
+$fly ="INSERT INTO user (mail, name, mobile) VALUES ('$mail' , '$name' , '$mobile')";
+
+if(mysqli_query($this->bird, $fly)) {
+echo"registration success";
+}
+else {
+
+echo "something went wrong" . mysqli_error($this->bird);
+
+
+  }
+ }
+}
+
+$Newuser = new reguser();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
